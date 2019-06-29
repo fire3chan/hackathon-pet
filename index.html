@@ -22,7 +22,7 @@
         font-weight: 600;
         font-family: "Source Sans Pro", sans-serif;
     }
-
+    
     .mobile-nav {
         position: fixed;
         bottom: 0;
@@ -57,6 +57,17 @@
     .daily-news-desc {
         margin: 0.5em 0 1em 0;
     }
+    .form-popup {
+        display: none;
+        position: fixed;
+        margin: auto;
+        bottom: 0;
+        right: 15px;
+        height: 80%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        background-color:lightblue
+    }
 </style>
 
 <body>
@@ -71,6 +82,11 @@
                             <a href="index.html">Fluffy</a>
                         </div>
                     </div>
+
+                    <div class="col-6 col-md-4 title">
+                        <button href="#" onclick="openForm()" class="float-right">To Do List</button>
+                    </div>
+                    
                     <nav class="col-6 col-md-8 d-none d-md-block ">
                         <div class="row">
                             <div class="col-12 text-right menu-1">
@@ -172,7 +188,20 @@
 
         <div class="margin-last"></div>
     </div>
-
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Coming Event </h1>
+      
+          <label for="email"><b> would be on 15/6 </b></label>
+          <p>: Vaccine </p>
+      
+          <label for="psw"><b>would be on 23/6 </b></label>
+          <p>: Glooming</p>
+      
+          
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -184,6 +213,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
