@@ -78,17 +78,28 @@
         border: 1px solid #ccc;
         border-top: none;
     }
-    .vet-gloom-search {
-        margin: 0.5em 0;
-    }
-    .vet-gloom-sort {
+
+    .vet-groom-search {
         margin: 0.5em 0;
     }
 
-    .vet-gloom-content {
+    .vet-groom-sort {
         margin: 0.5em 0;
-        padding: 0.5em 0;
-        border-bottom: 1px dashed #ccc;
+    }
+
+    .vet-groom-content {
+        padding: 0.5em;
+    }
+
+    .vet-groom-ctn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vet-groom-img {
+        max-width: 200px;
+        border-radius: 50%;
     }
 </style>
 
@@ -111,7 +122,7 @@
                                         <a class="nav-link" href="index.html">News</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a>
+                                        <a class="nav-link" href="vet_Grooming.html">Vet & grooming</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                                     <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
@@ -128,7 +139,7 @@
                                         <a class="nav-link" href="index.html">News</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="shopping.html">Vet & Glooming</a></li>
+                                        <a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a></li>
                                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                                     <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
                                 </ul>
@@ -143,55 +154,95 @@
                 <!-- Tab links -->
                 <div class="rating-tab row">
                     <button class="tablinks col-6" onclick="openCity(event, 'London')">Vet</button>
-                    <button class="tablinks col-6" onclick="openCity(event, 'Paris')">Glooming</button>
+                    <button class="tablinks col-6" onclick="openCity(event, 'Paris')">Grooming</button>
                 </div>
 
                 <!-- Tab content -->
                 <div id="London" class="tabcontent active row">
-                    <form class="col-12 vet-gloom-search">
-                        <input type="text float-left">
-                        <button type="button" class="btn btn-secondary float-right" >map</button>
-                    </form>
-                    <div class="col-12">
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/happydoctor.jpg" style="width: 100%;">
-                            </div>
-                            <div class="col-9">
-                                -area, what pet
+                    <form class="col-12 vet-groom-search">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter keyword here"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Map</button>
                             </div>
                         </div>
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/happydoctor.jpg" style="width: 100%;">
+                    </form>
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/happydoctor.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Eastern Street Methadone Clinic</h5>
+                                            <p class="card-text">45 Eastern Street, Sai Ying Pun | 2.9 km </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-9">
-                                -area, what pet
+                        </div>
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/doctor-b.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Doctor Chan Chun Yip</h5>
+                                            <p class="card-text">Shop No. 26, G/F, Wang Kwong Building, No.33 Ngau Tau Kok Road, Kwun Tong, Kowloon | 8 km </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="Paris" class="tabcontent">
-                    <form class="col-12 vet-gloom-search">
-                        <input type="text float-left">
-                        <button type="button" class="btn btn-secondary float-right" >Search</button>
-                    </form>
-                    <div class="col-12">
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/dog.jpg" style="width: 100%;">
-                            </div>
-                            <div class="col-9">
-                                -area, what pet
+                <div id="Paris" class="tabcontent row">
+                    <form class="col-12 vet-groom-search">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter keyword here"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
                             </div>
                         </div>
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/cat.jpg" style="width: 100%;">
+                    </form>
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/Stylist-a.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pet stylist Sun</h5>
+                                            <p class="card-text">45 Eastern Street, Sai Ying Pun | 1.2 km </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-9">
-                                -area, what pet
+                        </div>
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/Stylist-b.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pet Stylist</h5>
+                                            <p class="card-text">Blk 330 Ang Mo Kio Ave 1 | 1.7 km </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
