@@ -23,26 +23,6 @@
 	</head>
 
 	<style>
-	.title {
-	font-size: 24px;
-	margin: 0;
-	padding: 0.5em;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-family: "Source Sans Pro", sans-serif;
-	}
-
-	.mobile-nav {
-	position: fixed;
-	bottom: 0;
-	background-color: white;
-	z-index: 10;
-	}
-
-	.desktop-nav {
-	display: flex;
-	justify-content: flex-end;
-	}
 
 	.daily-news {
 	border-top-left-radius: 8px;
@@ -94,58 +74,52 @@
 
 	<body>
 
-	<!-- Navigation -->
-	<div class="container">
-
-		<div class="row">
-
-		<div class="col-12">
-			<div class="row">
-				<div class="col-6 col-md-4 title">
-					<div>
-						<a href="index.html">Fluffy</a>
-					</div>
-				</div>
-
+			<div class="container">
+					<div class="row">
+						<!-- header start-->
+						<div class="col-12">
+							<div class="row">
+								<div class="col-6 col-md-4 title">
+									<div>
+										<a href="index.html">Fluffy</a>
+									</div>
+								</div>
+								<nav class="col-6 col-md-8 d-none d-md-block ">
+									<div class="row">
+										<div class="col-12 text-right menu-1">
+											<ul class="nav desktop-nav">
+												<li class="nav-item">
+													<a class="nav-link" href="index.html">News</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a>
+												</li>
+												<li class="nav-item"><a class="nav-link" href="shoppingcart.html">Shop</a></li>
+												<li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+											</ul>
 			
-			<nav class="col-6 col-md-8 d-none d-md-block ">
-				<div class="row">
-					<div class="col-12 text-right menu-1">
-						<ul class="nav desktop-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="index.html">News</a>
-								</li>
-							<li class="nav-item">
-								<a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<div class="col-6 col-md-12 to-do-button">
-					<!--button href="#" onclick="openForm()" class="float-right"></button-->
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
-						To Do List
-					</button>
-				</div>
-			<nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
-				<div class="row">
-					<div class="col-12 text-right menu-1">
-						<ul class="nav">
-							<li class="nav-item">
-								<a class="nav-link" href="index.html">News</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a></li>
-							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
+										</div>
+									</div>
+								</nav>
+								<nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
+									<div class="row">
+										<div class="col-12 text-right menu-1">
+											<ul class="nav">
+												<li class="nav-item">
+													<a class="nav-link" href="index.html">News</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a></li>
+												<li class="nav-item"><a class="nav-link" href="shoppingcart.html">Shop</a></li>
+												<li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+											</ul>
+										</div>
+								</nav>
+								<div class="col-6 col-md-12 to-do-button">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
+										To Do List
+									</button>
+								</div>
 
 	</div>
 
