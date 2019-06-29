@@ -1,253 +1,254 @@
-<!doctype html>
-<html lang="en">
+    <!doctype html>
+    <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Fluffy</title>
-</head>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Fluffy</title>
+    </head>
 
-<style>
-    .title {
-        font-size: 24px;
-        margin: 0;
-        padding: 0.5em;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-family: "Source Sans Pro", sans-serif;
-    }
-
-    .mobile-nav {
-        position: fixed;
-        bottom: 0;
-        background-color: white;
-        z-index: 10;
-    }
-
-    .desktop-nav {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .daily-news {
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        background-color: #fff;
-        margin: 0 0 10px 0;
-        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-        border-radius: 8px;
-        border-bottom: 1px hidden #fff;
-    }
-
-    .daily-news-title {
-        margin: 0.5em 0px;
-        position: relative;
-        z-index: 1;
-        color: #4B11A8;
-    }
-
-    .daily-news-desc {
-        margin: 0.5em 0 1em 0;
-    }
-
-    .form-popup {
-        display: none;
-        position: fixed;
-        margin: auto;
-        bottom: 0;
-        right: 15px;
-        height: 80%;
-        border: 3px solid #f1f1f1;
-        z-index: 9;
-        background-color: lightblue
-    }
-
-    .to-do-button {
-        margin-bottom: 1em;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    @media (max-width: 576px) {
-        .to-do-button {
-            margin: 1em 0;
+    <style>
+        .title {
+            font-size: 24px;
+            margin: 0;
+            padding: 0.5em;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: "Source Sans Pro", sans-serif;
         }
-    }
 
-</style>
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+            z-index: 10;
+        }
 
-<body>
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+        }
 
-    <div class="container">
-        <div class="row">
-            <!-- header start-->
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-6 col-md-4 title">
-                        <div>
-                            <a href="index.html">Fluffy</a>
-                        </div>
-                    </div>
+        .daily-news {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: #fff;
+            margin: 0 0 10px 0;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-radius: 8px;
+            border-bottom: 1px hidden #fff;
+        }
 
-                    <nav class="col-6 col-md-8 d-none d-md-block ">
-                        <div class="row">
-                            <div class="col-12 text-right menu-1">
-                                <ul class="nav desktop-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">News</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-                                </ul>
+        .daily-news-title {
+            margin: 0.5em 0px;
+            position: relative;
+            z-index: 1;
+            color: #4B11A8;
+        }
+
+        .daily-news-desc {
+            margin: 0.5em 0 1em 0;
+        }
+
+        .form-popup {
+            display: none;
+            position: fixed;
+            margin: auto;
+            bottom: 0;
+            right: 15px;
+            height: 80%;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+            background-color: lightblue
+        }
+
+        .to-do-button {
+            margin-bottom: 1em;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 576px) {
+            .to-do-button {
+                margin: 1em 0;
+            }
+        }
+
+    </style>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <!-- header start-->
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 col-md-4 title">
+                            <div>
+                                <a href="index.html">Fluffy</a>
                             </div>
                         </div>
-                    </nav>
-                    <div class="col-6 col-md-12 to-do-button">
-                        <!--button href="#" onclick="openForm()" class="float-right"></button-->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
-                            To Do List
-                        </button>
+
+                        <nav class="col-6 col-md-8 d-none d-md-block ">
+                            <div class="row">
+                                <div class="col-12 text-right menu-1">
+                                    <ul class="nav desktop-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="col-6 col-md-12 to-do-button">
+                            <!--button href="#" onclick="openForm()" class="float-right"></button-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
+                                To Do List
+                            </button>
+                        </div>
+
+                        <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
+                            <div class="row">
+                                <div class="col-12 text-right menu-1">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
 
-                    <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
-                        <div class="row">
-                            <div class="col-12 text-right menu-1">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">News</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
                 </div>
+                <!-- end header-->
+                <div class="daily-news-ctn col-12">
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">33 More Awesome Facts About Cats</a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                                Cats are a riddle wrapped in a mystery. Wrapped in a cat.
+                        </div>
+                    </div>
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">How to Cut Costs on Pet Care</a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                                The four-legged members of your family don't have to be the most expensive.
+                        </div>
+                    </div>
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">The Best Pet Products of 2019 | Reviews.com                            </a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                                Reviews.com has done hours of research vetting a variety of pet products to ensure we recommend the best, safest pet food, toys, and other products for your ...
+                        </div>
+                    </div>
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">Revealing Secrets Your Dog Knows About You | Reader's Digest
+                                </a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                                Dogs notice when you're sad, mad, or suspicious. They can even detect cancer. Turns out, dogs know more about your emotions and health than you ever ...
+                        </div>
+                    </div>
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">口高錯企請</a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                            成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        </div>
+                    </div>
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">口高錯企請</a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                            成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        </div>
+                    </div>
+                    <div class="row daily-news">
+                        <div class="col-12 daily-news-title">
+                            <a href="#">口高錯企請</a>
+                        </div>
+                        <div class="col-12 daily-news-desc">
+                            成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        </div>
+                    </div>
+
+                </div>
+                <!--content end-->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="to-do-modal" tabindex="-1" role="dialog" aria-labelledby="#toDoModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Coming Event</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                
+                                        <form action="/action_page.php" class="row">
+                                            <label class="col-6" for="email"><b> would be on 15/6: </b></label>
+                                            <div class="col-6">Vaccine </div>
+
+                                            <label class="col-6" for="psw"><b>would be on 23/6: </b></label>
+                                            <div class="col-6">Glooming</div>
+                                        </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
             </div>
-            <!-- end header-->
-            <div class="daily-news-ctn col-12">
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
 
-            </div>
-            <!--content end-->
-
-                <!-- Modal -->
-                <div class="modal fade" id="to-do-modal" tabindex="-1" role="dialog" aria-labelledby="#toDoModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Coming Event</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                               
-                                    <form action="/action_page.php" class="row">
-                                        <label class="col-6" for="email"><b> would be on 15/6: </b></label>
-                                        <div class="col-6">Vaccine </div>
-
-                                        <label class="col-6" for="psw"><b>would be on 23/6: </b></label>
-                                        <div class="col-6">Glooming</div>
-                                    </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="margin-last"></div>
         </div>
 
-        <div class="margin-last"></div>
-    </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script>
+        </script>
+    </body>
 
-    </script>
-</body>
-
-</html>
+    </html>

@@ -1,243 +1,255 @@
-<!doctype html>
-<html lang="en">
+    <!doctype html>
+    <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Fluffy</title>
-</head>
-<style>
-    .title {
-        font-size: 24px;
-        margin: 0;
-        padding: 0.5em;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-family: "Source Sans Pro", sans-serif;
-    }
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Fluffy</title>
+    </head>
+    <style>
+        .title {
+            font-size: 24px;
+            margin: 0;
+            padding: 0.5em;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: "Source Sans Pro", sans-serif;
+        }
 
-    .mobile-nav {
-        position: fixed;
-        bottom: 0;
-        background-color: white;
-        z-index: 10;
-    }
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+            z-index: 10;
+        }
 
-    .desktop-nav {
-        display: flex;
-        justify-content: flex-end;
-    }
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+        }
 
-    .status-ctn {
-        margin: 0 0 5em 0;
-    }
+        .status-ctn {
+            margin: 0 0 5em 0;
+        }
 
-    .status-item {
-        background-color: aqua;
-        height: 182px;
-    }
+        .status-item {
+            background-color: aqua;
+            height: 182px;
+        }
 
-    /* Style the tab */
-    .rating-tab {
-        overflow: hidden;
-        border: 1px solid #ccc;
-        background-color: #f1f1f1;
-    }
+        /* Style the tab */
+        .rating-tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
 
-    /* Style the buttons that are used to open the tab content */
-    .rating-tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.3s;
-    }
+        /* Style the buttons that are used to open the tab content */
+        .rating-tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
 
-    /* Change background color of buttons on hover */
-    .rating-tab button:hover {
-        background-color: #ddd;
-    }
+        /* Change background color of buttons on hover */
+        .rating-tab button:hover {
+            background-color: #ddd;
+        }
 
-    /* Create an active/current tablink class */
-    .rating-tab button.active {
-        background-color: #ccc;
-    }
+        /* Create an active/current tablink class */
+        .rating-tab button.active {
+            background-color: #ccc;
+        }
 
-    /* Style the tab content */
-    .tabcontent {
-        display: none;
-        padding: 6px 12px;
-        border: 1px solid #ccc;
-        border-top: none;
-    }
-    .vet-gloom-search {
-        margin: 0.5em 0;
-    }
-    .vet-gloom-sort {
-        margin: 0.5em 0;
-    }
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .vet-gloom-search {
+            margin: 0.5em 0;
+        }
+        .vet-gloom-sort {
+            margin: 0.5em 0;
+        }
 
-    .vet-gloom-content {
-        margin: 0.5em 0;
-        padding: 0.5em 0;
-        border-bottom: 1px dashed #ccc;
-    }
-</style>
+        .vet-gloom-content {
+            margin: 0.5em 0;
+            padding: 0.5em 0;
+            border-bottom: 1px dashed #ccc;
+        }
 
-<body>
+        .to-do-button {
+            margin-bottom: 1em;
+            display: flex;
+            justify-content: flex-end;
+        }
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-6 col-md-4 title">
-                        <div>
-                            <a href="index.html">Fluffy</a>
+        @media (max-width: 576px) {
+            .to-do-button {
+                margin: 1em 0;
+            }
+        }
+    </style>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6 col-md-4 title">
+                            <div>
+                                <a href="index.html">Fluffy</a>
+                            </div>
+                        </div>
+                        <nav class="col-6 col-md-8 d-none d-md-block ">
+                            <div class="row">
+                                <div class="col-12 text-right menu-1">
+                                    <ul class="nav desktop-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </nav>
+                        <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
+                            <div class="row">
+                                <div class="col-12 text-right menu-1">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="shopping.html">Vet & Glooming</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+
+                </div>
+                <div class="col-12">
+                    <!-- Tab links -->
+                    <div class="rating-tab row">
+                        <button class="tablinks col-6" onclick="openCity(event, 'London')">Vet</button>
+                        <button class="tablinks col-6" onclick="openCity(event, 'Paris')">Glooming</button>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div id="London" class="tabcontent active row">
+                        <form class="col-12 vet-gloom-search">
+                            <input type="text float-left">
+                            <button type="button" class="btn btn-secondary float-right" >map</button>
+                        </form>
+                        <div class="col-12">
+                            <div class="row vet-gloom-content">
+                                <div class="col-3">
+                                    <img src="img/happydoctor.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-9">
+                                    -area, what pet
+                                </div>
+                            </div>
+                            <div class="row vet-gloom-content">
+                                <div class="col-3">
+                                    <img src="img/happydoctor.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-9">
+                                    -area, what pet
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <nav class="col-6 col-md-8 d-none d-md-block ">
-                        <div class="row">
-                            <div class="col-12 text-right menu-1">
-                                <ul class="nav desktop-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">News</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="vet_Glooming.html">Vet & Glooming</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-                                </ul>
-                            </div>
-                        </div>
 
-                    </nav>
-                    <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
-                        <div class="row">
-                            <div class="col-12 text-right menu-1">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">News</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="shopping.html">Vet & Glooming</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-                                </ul>
+                    <div id="Paris" class="tabcontent">
+                        <form class="col-12 vet-gloom-search">
+                            <input type="text float-left">
+                            <button type="button" class="btn btn-secondary float-right" >Search</button>
+                        </form>
+                        <div class="col-12">
+                            <div class="row vet-gloom-content">
+                                <div class="col-3">
+                                    <img src="img/dog.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-9">
+                                    -area, what pet
+                                </div>
+                            </div>
+                            <div class="row vet-gloom-content">
+                                <div class="col-3">
+                                    <img src="img/cat.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-9">
+                                    -area, what pet
+                                </div>
                             </div>
                         </div>
-                    </nav>
+                    </div>
+
                 </div>
-
 
             </div>
-            <div class="col-12">
-                <!-- Tab links -->
-                <div class="rating-tab row">
-                    <button class="tablinks col-6" onclick="openCity(event, 'London')">Vet</button>
-                    <button class="tablinks col-6" onclick="openCity(event, 'Paris')">Glooming</button>
-                </div>
-
-                <!-- Tab content -->
-                <div id="London" class="tabcontent active row">
-                    <form class="col-12 vet-gloom-search">
-                        <input type="text float-left">
-                        <button type="button" class="btn btn-secondary float-right" >map</button>
-                    </form>
-                    <div class="col-12">
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/happydoctor.jpg" style="width: 100%;">
-                            </div>
-                            <div class="col-9">
-                                -area, what pet
-                            </div>
-                        </div>
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/happydoctor.jpg" style="width: 100%;">
-                            </div>
-                            <div class="col-9">
-                                -area, what pet
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="Paris" class="tabcontent">
-                    <form class="col-12 vet-gloom-search">
-                        <input type="text float-left">
-                        <button type="button" class="btn btn-secondary float-right" >Search</button>
-                    </form>
-                    <div class="col-12">
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/dog.jpg" style="width: 100%;">
-                            </div>
-                            <div class="col-9">
-                                -area, what pet
-                            </div>
-                        </div>
-                        <div class="row vet-gloom-content">
-                            <div class="col-3">
-                                <img src="img/cat.jpg" style="width: 100%;">
-                            </div>
-                            <div class="col-9">
-                                -area, what pet
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <div class="margin-last"></div>
 
         </div>
-        <div class="margin-last"></div>
-
-    </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 
-    <script>
-        function openCity(evt, cityName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
+        <script>
+            function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
 
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
             }
+        </script>
 
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
+    </body>
 
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
-
-</body>
-
-</html>
+    </html>
