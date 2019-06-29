@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Hello, world!</title>
+    <title>Fluffy</title>
 </head>
 
 <style>
@@ -22,7 +22,7 @@
         font-weight: 600;
         font-family: "Source Sans Pro", sans-serif;
     }
-    
+
     .mobile-nav {
         position: fixed;
         bottom: 0;
@@ -57,6 +57,7 @@
     .daily-news-desc {
         margin: 0.5em 0 1em 0;
     }
+
     .form-popup {
         display: none;
         position: fixed;
@@ -66,8 +67,21 @@
         height: 80%;
         border: 3px solid #f1f1f1;
         z-index: 9;
-        background-color:lightblue
+        background-color: lightblue
     }
+
+    .to-do-button {
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @media (max-width: 576px) {
+        .to-do-button {
+            margin: 1em 0;
+        }
+    }
+
 </style>
 
 <body>
@@ -83,10 +97,6 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4 title">
-                        <button href="#" onclick="openForm()" class="float-right">To Do List</button>
-                    </div>
-                    
                     <nav class="col-6 col-md-8 d-none d-md-block ">
                         <div class="row">
                             <div class="col-12 text-right menu-1">
@@ -102,8 +112,14 @@
                                 </ul>
                             </div>
                         </div>
-
                     </nav>
+                    <div class="col-6 col-md-12 to-do-button">
+                        <!--button href="#" onclick="openForm()" class="float-right"></button-->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
+                            To Do List
+                        </button>
+                    </div>
+
                     <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
                         <div class="row">
                             <div class="col-12 text-right menu-1">
@@ -182,26 +198,42 @@
                 </div>
 
             </div>
+            <!--content end-->
 
+                <!-- Modal -->
+                <div class="modal fade" id="to-do-modal" tabindex="-1" role="dialog" aria-labelledby="#toDoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Coming Event</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                               
+                                    <form action="/action_page.php" class="row">
+                                        <label class="col-6" for="email"><b> would be on 15/6: </b></label>
+                                        <div class="col-6">Vaccine </div>
+
+                                        <label class="col-6" for="psw"><b>would be on 23/6: </b></label>
+                                        <div class="col-6">Glooming</div>
+                                    </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         </div>
 
         <div class="margin-last"></div>
     </div>
-    <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-          <h1>Coming Event </h1>
-      
-          <label for="email"><b> would be on 15/6 </b></label>
-          <p>: Vaccine </p>
-      
-          <label for="psw"><b>would be on 23/6 </b></label>
-          <p>: Glooming</p>
-      
-          
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -214,13 +246,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
-        
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
+
     </script>
 </body>
 
