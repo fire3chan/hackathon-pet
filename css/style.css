@@ -4,3 +4,24 @@
 .margin-last {
     margin-bottom: 5em;
 }
+.title {
+    font-size: 24px;
+    margin: 0;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    z-index: 10;
+    border-top: #c7c7c7 1px solid;
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: flex-end;
+}
