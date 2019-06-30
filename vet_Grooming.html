@@ -125,10 +125,10 @@
                             </div>
                     </nav>
                     <div class="col-6 col-md-12 to-do-button">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
-                                To Do List
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
+                            To Do List
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -230,7 +230,34 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Modal -->
+                </div>
+                <div class="modal fade" id="to-do-modal" tabindex="-1" role="dialog" aria-labelledby="#toDoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Coming Event</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
 
+                                <form action="/action_page.php" class="row">
+                                    <label class="col-6" for="email"><b> would be on 15/6: </b></label>
+                                    <div class="col-6">Vaccine </div>
+
+                                    <label class="col-6" for="psw"><b>would be on 23/6: </b></label>
+                                    <div class="col-6">Glooming</div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="margin-last"></div>
             </div>
