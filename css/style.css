@@ -1,3 +1,44 @@
 * {
     font-family: Roboto,HelveticaNeue,Arial,sans-serif
 }
+.margin-last {
+    margin-bottom: 5em;
+}
+.title {
+    font-size: 24px;
+    margin: 0;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    color: orangered;
+}
+.title a {
+    color: orangered
+}
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    z-index: 10;
+    border-top: #c7c7c7 1px solid;
+}
+
+.mobile-nav a {
+    color: white;
+}
+.desktop-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.to-do-button {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 576px) {
+    .to-do-button {
+        margin: 1em 0;
+    }
+}

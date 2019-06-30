@@ -10,30 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Hello, world!</title>
+    <title>Fluffy</title>
 </head>
 
 <style>
-    .title {
-        font-size: 24px;
-        margin: 0;
-        padding: 0.5em;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-family: "Source Sans Pro", sans-serif;
-    }
-
-    .mobile-nav {
-        position: fixed;
-        bottom: 0;
-        background-color: white;
-        z-index: 10;
-    }
-
-    .desktop-nav {
-        display: flex;
-        justify-content: flex-end;
-    }
 
     .daily-news {
         border-top-left-radius: 8px;
@@ -57,9 +37,22 @@
     .daily-news-desc {
         margin: 0.5em 0 1em 0;
     }
+
+    .to-do-button {
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @media (max-width: 576px) {
+        .to-do-button {
+            margin: 1em 0;
+        }
+    }
 </style>
 
 <body>
+
 
     <div class="container">
         <div class="row">
@@ -72,37 +65,42 @@
                         </div>
                     </div>
                     <nav class="col-6 col-md-8 d-none d-md-block ">
-                        <div class="row">
-                            <div class="col-12 text-right menu-1">
-                                <ul class="nav desktop-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">News</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="shopping.html">Shopping</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="col-12 text-right menu-1">
+                                    <ul class="nav desktop-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="shoppingcart.html">Shop</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                    </ul>
+    
+                                </div>
                             </div>
-                        </div>
+                        </nav>
+                        <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
+                            <div class="row">
+                                <div class="col-12 text-right menu-1">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="shoppingcart.html">Shop</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                    </ul>
+                                </div>
+                        </nav>
+                    <div class="col-6 col-md-12 to-do-button">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
+                            To Do List
+                        </button>
+                    </div>
 
-                    </nav>
-                    <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
-                        <div class="row">
-                            <div class="col-12 text-right menu-1">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">News</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="shopping.html">Shopping</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
                 </div>
 
             </div>
@@ -110,68 +108,91 @@
             <div class="daily-news-ctn col-12">
                 <div class="row daily-news">
                     <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
+                        <a href="#">33 More Awesome Facts About Cats</a>
                     </div>
                     <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        Cats are a riddle wrapped in a mystery. Wrapped in a cat.
                     </div>
                 </div>
                 <div class="row daily-news">
                     <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
+                        <a href="#">ads</a>
                     </div>
                     <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        <img src="img/ad2.jpg" class="img-responsive" height="190px">
                     </div>
                 </div>
                 <div class="row daily-news">
                     <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
+                        <a href="#">How to Cut Costs on Pet Care</a>
                     </div>
                     <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        The four-legged members of your family don't have to be the most expensive.
                     </div>
                 </div>
                 <div class="row daily-news">
                     <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
+                        <a href="#">The Best Pet Products of 2019 | Reviews.com </a>
                     </div>
                     <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        Reviews.com has done hours of research vetting a variety of pet products to ensure we recommend
+                        the best, safest pet food, toys, and other products for your ...
                     </div>
                 </div>
                 <div class="row daily-news">
                     <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
+                        <a href="#">Revealing Secrets Your Dog Knows About You | Reader's Digest
+                        </a>
                     </div>
                     <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        Dogs notice when you're sad, mad, or suspicious. They can even detect cancer. Turns out, dogs
+                        know more about your emotions and health than you ever ...
                     </div>
                 </div>
                 <div class="row daily-news">
                     <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
+                        <a href="#">ads</a>
                     </div>
                     <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
+                        <img src="img/ad1.jpg" class="img-responsive" height="230px">
                     </div>
                 </div>
-                <div class="row daily-news">
-                    <div class="col-12 daily-news-title">
-                        <a href="#">口高錯企請</a>
-                    </div>
-                    <div class="col-12 daily-news-desc">
-                        成說如觀明學外上醫國也題才。賽民能力年到積前不太。工越後科……裡義結雄存前：一半在、人民學南陽這向作媽選言關的選同手經古兩賽法子什許做紙集停臺與文亮一節技，業速告係同大。到覺全形有待會會開係公不！
-                    </div>
-                </div>
-
 
             </div>
+            <!--content end-->
 
+            <!-- Modal -->
+            <div class="modal fade" id="to-do-modal" tabindex="-1" role="dialog" aria-labelledby="#toDoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Coming Event</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form action="/action_page.php" class="row">
+                                <label class="col-6" for="email"><b>15/6/2019: </b></label>
+                                <div class="col-6">Vaccine </div>
+
+                                <label class="col-6" for="psw"><b>23/6/2019: </b></label>
+                                <div class="col-6">Glooming</div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-
+        <div class="margin-last"></div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -185,6 +206,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>

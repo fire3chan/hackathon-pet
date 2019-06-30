@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Fluffy</title>
+</head>
+<style>
+    .status-ctn {
+        margin: 0 0 5em 0;
+    }
+
+    .status-item {
+        background-color: aqua;
+        height: 182px;
+    }
+
+    /* Style the tab */
+    .rating-tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .rating-tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    .rating-tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .rating-tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+    .vet-groom-search {
+        margin: 0.5em 0;
+    }
+
+    .vet-groom-sort {
+        margin: 0.5em 0;
+    }
+
+    .vet-groom-content {
+        padding: 0.5em;
+    }
+
+    .vet-groom-ctn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vet-groom-img {
+        max-width: 200px;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6 col-md-4 title">
+                        <div>
+                            <a href="index.html">Fluffy</a>
+                        </div>
+                    </div>
+                    <nav class="col-6 col-md-8 d-none d-md-block ">
+                        <div class="row">
+                            <div class="col-12 text-right menu-1">
+                                <ul class="nav desktop-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">News</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="shoppingcart.html">Shop</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                    <nav class="col-12 d-md-none d-lg-none d-xl-none mobile-nav">
+                        <div class="row">
+                            <div class="col-12 text-right menu-1">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">News</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="vet_Grooming.html">Vet & Grooming</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="shoppingcart.html">Shop</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Profile</a></li>
+                                </ul>
+                            </div>
+                    </nav>
+                    <div class="col-6 col-md-12 to-do-button">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#to-do-modal">
+                            To Do List
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12">
+                <!-- Tab links -->
+                <div class="rating-tab row">
+                    <button class="tablinks col-6 active" onclick="openCity(event, 'Vet')">Vet</button>
+                    <button class="tablinks col-6" onclick="openCity(event, 'Grooming')">Grooming</button>
+                </div>
+
+                <!-- Tab content -->
+                <div id="Vet" class="tabcontent active row">
+                    <form class="col-12 vet-groom-search">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter keyword here"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Map</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/clin1-1.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Eastern Street Methadone Clinic</h5>
+                                            <p class="card-text">45 Eastern Street, Sai Ying Pun | 2.9 km </p>
+                                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/clin3-1.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Doctor Chan Chun Yip</h5>
+                                            <p class="card-text">Shop No. 26, G/F, Wang Kwong Building, No.33 Ngau Tau
+                                                Kok Road, Kwun Tong, Kowloon | 8 km </p>
+                                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="Grooming" class="tabcontent row">
+                    <form class="col-12 vet-groom-search">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter keyword here"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="button-addon2">Search</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/Stylist-a.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pet stylist Sun</h5>
+                                            <p class="card-text">45 Eastern Street, Sai Ying Pun | 1.2 km </p>
+                                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card mb-3 col-12 vet-groom-content">
+                                <div class="row no-gutters">
+                                    <div class="col-4 col-md-4 vet-groom-ctn">
+                                        <img src="img/Stylist-b.jpg" class="card-img vet-groom-img" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pet Stylist</h5>
+                                            <p class="card-text">Blk 330 Ang Mo Kio Ave 1 | 1.7 km </p>
+                                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                </div>
+                <div class="modal fade" id="to-do-modal" tabindex="-1" role="dialog" aria-labelledby="#toDoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Coming Event</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <form action="/action_page.php" class="row">
+                                    <label class="col-6" for="email"><b>15/6/2019: </b></label>
+                                    <div class="col-6">Vaccine </div>
+
+                                    <label class="col-6" for="psw"><b>23/6/2019: </b></label>
+                                    <div class="col-6">Glooming</div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-last"></div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    tabcontent[0].style.display = "block";
+                });
+                function openCity(evt, cityName) {
+                    // Declare all variables
+                    var i, tabcontent, tablinks;
+
+                    // Get all elements with class="tabcontent" and hide them
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+
+                    // Get all elements with class="tablinks" and remove the class "active"
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+
+                    // Show the current tab, and add an "active" class to the button that opened the tab
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+
+</body>
+
+</html>
